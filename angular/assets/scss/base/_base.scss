@@ -1,0 +1,153 @@
+
+html{
+    font-size: 14px;
+}
+
+body{
+    background: $bg-color url('../images/bg-img.png') no-repeat top;
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: $font-light;
+    color: $primary-color;
+}
+
+p{
+    font-family: $font-book;
+    font-size: 12px;
+}
+
+main{
+    min-height: calc(100vh - 105px);
+    padding-top: 8.5rem;
+}
+
+.container-header{   
+    border-bottom: 1px solid $page-divider;
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+    margin-right: -20px;
+    margin-left: -20px;
+    
+    &.no-bottom-space{
+        margin-bottom: 0px;
+    }
+    h2{
+        font-size:1.7857142857142858rem;
+        span{
+            font-family: $font-medium;
+            font-weight: normal;
+        }
+    }
+    h2, p, ul {
+        color: $white-color;
+        font-weight: normal;
+    }
+    p{
+        margin-bottom: 0;
+        font-size:0.8571428571428571rem;
+        font-family: $font-book; 
+    }
+    .single-line{
+        min-height: 2.5rem;
+    }
+    ul {
+        padding-left:15px;
+        margin:0;
+        margin-bottom: 5px;
+        li{
+            font-size:0.8571428571428571rem;
+            font-family: $font-book; 
+        }
+    }
+    button{
+        margin-left:0.6rem;
+    }
+}
+
+/*back arrow*/
+a.back-arrow{
+    color: $white-color;
+    position: absolute;
+    left: -4.7rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration:none; 
+}
+.small-font{
+    font-size: 0.8571rem!important;
+}
+
+/*Grid Customization*/
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1080px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+.three-column-layout{
+    .row{
+        margin-right: -20px;
+        margin-left: -20px;    
+        .col-md-4{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+}
+
+
+.inner-card{
+    @include box-shadow(0 0 5px 1px rgba(0, 0, 0, .15));
+    margin-bottom:1.4285714285714286rem;
+    
+    .title-header{
+        padding:1.4285714285714286rem;
+        padding-bottom: 0;
+        
+        .title{
+            font-family: $font-medium;
+            font-size: 0.8571428571428571rem;
+        }
+        
+        .link{
+            a{
+                font-family: $font-medium;
+                font-size: 0.8571428571428571rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color:$orange-color;
+            }
+        }
+    }
+    .card-content{
+        padding:1.4285714285714286rem;
+    }
+}
+
+.flag-checkbox{
+    display: block;
+    margin: 0px;
+    cursor: pointer;
+    
+    input[type="checkbox"]{
+        display: none;
+        
+        &:checked + .flag-content{
+            border-color:$orange-color;
+        }
+    }
+    
+    .flag-content{
+        padding: 1rem;
+        border: 1px solid #f7f7f8;
+        text-align: center;
+        
+        span{
+            display: block;
+            font-size: 0.8571428571428571rem;
+            margin-top: 1rem;
+            font-family: $font-medium;
+        }
+    }
+}

@@ -1,0 +1,224 @@
+.site-details-container {
+    .card-header {
+        border:none;
+        span {
+            border-right:1px solid #ccc;
+            padding:0 0.8rem;
+            font-family: $font-book;
+            &:first-child{
+                color:$heading-color;
+                border-right:0;
+                padding:0;
+                text-transform: uppercase;
+                font-family: $font-medium;
+            }
+            &:last-child{
+               border-right:0; 
+            }
+            b{
+                font-weight: normal;
+                font-family: $font-medium;
+            }
+        }
+        .right a {
+            color:$heading-color;
+            &:hover {
+                text-decoration:none;
+            }
+            i {
+                font-size:1.1rem;
+            }
+        }
+    }
+    .custom-tabs {
+        width:100%;
+        background:$light-gray;
+        position:relative;
+        &:before {
+            height:1px;
+            background:#ddd;
+            position:absolute;
+            left:1.4666666666666666rem;
+            right:1.4666666666666666rem;
+            top:0;
+            content:"";
+        }
+        .nav-tabs {
+            a {
+                i {
+                    width:14px;
+                    height:14px;
+                    background:$light-green;
+                    -webkit-border-radius:50%;
+                    -moz-border-radius:50%;
+                    border-radius:50%;
+                    font-size:0.6rem;
+                    color:$white-color;
+                    line-height:14px;
+                    margin-left:10px;
+                    vertical-align:1px;
+                    display: inline-block;
+                    &:before {
+                        color:$white-color;
+                    }
+                }
+                
+                &.active ~ a{
+                    i {
+                        display:none;
+                    }
+                }
+               
+            }
+            
+            
+        }
+    }
+    .service-desc-wrapper {
+        h3 {
+            font:normal 1rem $font-medium;
+            border-bottom:1px solid $blue-border;
+            padding-bottom:0.6rem;
+            margin-bottom:3rem;
+            cursor:default;
+            a {
+                float:right;
+                font-size:1rem;
+                color:$heading-color;
+                line-height:2rem;
+                text-decoration:none!important;
+            }
+            &[aria-expanded="true"] a i:before {
+                content:"\e91e";
+            }
+        }
+        h4 {
+            font-family: $font-medium;
+            font-size: 11px;
+            margin-bottom:1rem;
+            color: $label-color;
+        }
+        p {
+            margin:0;
+            font-size: 11px;
+            font-family: $font-book;
+            color:$sub-title;
+            span {
+                color:$heading-color;
+            }
+            &.service-details-link {
+                margin-top:1rem;
+                a {
+                    font-family: $font-bold;
+                    font-weight: bold;
+                    color: $heading-color;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    &:hover{
+                        text-decoration: none;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                    }
+                }                
+            }
+        }
+        .text-success{
+            color:$light-green;
+            font-size: 11px;
+            font-family: $font-book;
+        }
+        .sliderIcon {
+            width: 25px;
+            height: 25px;
+            border: 1px solid $heading-color;
+            border-radius: 50%;
+            line-height: 24px;
+            text-align: center;
+            font-size: 9px;
+            font-weight: 300;
+            color: $heading-color;
+            cursor: pointer;
+        }
+        .sliderMain{
+            width:calc(100% - 50px);
+        }
+        label.change{
+            margin-top:0.5rem;
+            margin-bottom: -0.4rem;
+            font-family: $font-book;
+        }
+        label{
+            font-family: $font-medium;
+            font-size: 0.7857rem;
+        }
+        .ct-inline-form{
+            margin-bottom: 1.071rem;
+            .form-title{
+                min-width: 65px;
+            }
+        }
+        .basic-settings-card{
+            margin-bottom: 2.143rem;
+        }
+
+    }
+}
+.ct-card .card-header .title{
+    .normal-title{
+        font-family: $font-book;
+    }
+}
+.advance-settings-block{
+    padding-left: 20px;
+    .radio-top{
+        padding: 0.4rem 0 0.8rem
+    }
+    .icon-info{
+        top:1px;
+    }
+}
+/* View Service Details Modal */
+.service-details-modal {
+    font-family: $font-book;
+    font-size: 12px;
+    h4 {
+        font:normal 1rem "Gotham-Bold";
+        margin-bottom:1rem;
+        font-size: 12px;
+    }
+    ul {
+        list-style:none;
+        padding:0;
+        margin:0 0 3rem;
+        li {
+            margin-bottom:1rem;
+            position:relative;
+            padding-left:1rem;
+            
+            &:before {
+                position:absolute;
+                left:0;
+                top:7px;
+                width:4px;
+                height:4px;
+                background:$orange-color;
+                -webkit-border-radius:50%;
+                -moz-border-radius:50%;
+                border-radius:50%;
+                content:"";
+            }
+        }
+    }
+    ol {
+        list-style:decimal;
+        padding:0 0 0 15px;
+        margin:0;
+        li {
+            margin-bottom:1rem;
+        }
+    }
+}
+.site-list-spacing{
+    padding: 0.6rem 0;
+}
+
+

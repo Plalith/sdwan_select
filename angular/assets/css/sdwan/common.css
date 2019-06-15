@@ -1,0 +1,575 @@
+.mainBox{
+    transition: max-width 0.3s, margin 0.3s;
+    margin-left: 175px;
+    margin-right: 65px;
+    max-width: 100%;
+  }
+  .sideHide {
+    margin-left: 100px ;
+    margin-right: 100px ;
+  }
+  .boldText {
+    font-family: Gotham-Medium
+  }
+  .smallText {
+    font-family: Gotham-Medium;
+    font-size: 12px;
+  }
+  .lightColorText {
+    font-family: Gotham-Medium;
+    font-size: 12px;
+    color: #A1A1A1;
+  }
+.link {
+  text-decoration: none;
+  color: #e87624;
+  cursor: pointer;
+}
+.link:hover {
+  color: #e87624;
+}
+.link:focus {
+  color: #d8610cec;
+}
+  .defColor {
+    color: #e87624;
+    cursor: pointer;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+/* TD hint box */
+.tdhint{
+    background-color: #3b84c5;
+    color: #fff;
+    visibility: hidden;
+    padding: 15px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 1;
+    font-family: Gotham-Book;
+    width: 211px;
+    top: 39px;
+    left: 6px;
+}
+.tdhint::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 11px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #3b84c5;
+}
+  .thdhint_hide {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+}
+/* TD hint Box end */
+
+/* Check Box styles */
+  .checkboxMC {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #e2ddddc4;
+    font-weight: 600;
+  }
+  .checkboxMC.tableCheckBox {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    border-bottom: none !important;
+    left: -10px;
+  }
+  /* Hide the browser's default checkbox */
+  .checkboxMC input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+  position: absolute;
+    top: 18px;
+    left: 10px;
+    height: 18px;
+    width: 18px;
+    border-radius: 4px;
+    background-color: white;
+    border:1px solid #e87624;
+  }
+  .disabled_cmark{
+    background-color: #ccc;
+  }
+
+  /* On mouse-over, add a grey background color */
+  /* .checkboxMC:hover input ~ .checkmark {
+    background-color: #ccc;
+  } */
+
+  /* When the checkbox is checked, add a blue background */
+  .checkboxMC input:checked ~ .checkmark {
+    background-color: #e87624;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .checkboxMC input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkboxMC .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+/* Check Box end /
+/* The radioInput */
+.radioInput {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  margin-bottom: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Hide the browser's default radio button */
+.radioInput input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radioCheck {
+position: absolute;
+top: 1px;
+left: 7px;
+height: 16px;
+width: 16px;
+background-color: white;
+border-radius: 50%;
+border: solid 1px #e87624;
+}
+
+/* On mouse-over, add a grey background color */
+/* .radioInput:hover input ~ .radioCheck {
+background-color: #ccc;
+} */
+
+/* When the radio button is checked, add a blue background */
+.radioInput input:checked ~ .radioCheck {
+background-color: #e87624;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radioCheck:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioInput input:checked ~ .radioCheck:after {
+display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioInput .radioCheck:after {
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+/* Radio End*/
+/* input */
+input[type=text].sdwan_input {
+  border: none;
+  width: 100%;
+  border-bottom: solid 1px rgba(169, 169, 169, 0.68);
+  font-size: 13px;
+  font-family: Gotham-Book;
+}
+/*input end */
+
+
+
+/* Pages right ctas */
+.right_items{
+  display: inline-flex;
+  float: right;
+}
+.view_icon {
+  margin-left: 25px;
+}
+.search_form span {
+  color: white;
+  font-weight: 600;
+}
+
+.search_form img {
+  position: absolute;
+  top: 11px;
+  width: 14px;
+}
+.search_form input[type='text'] {
+  background-color: #0A284A;
+  color: white;
+  border: none;
+  width: 255px;
+  margin-top: 6px;
+  padding-left: 20px;
+  border-bottom: solid 1px rgba(181, 175, 175, 0.653);
+}
+/* inputs elements  */
+.select_cs {
+  display: inline-flex;
+  float: right;
+  border-bottom: solid 1px rgba(181, 175, 175, 0.653);
+}
+.select_cs label {
+  font-family: Gotham-Book;
+  padding-right: 25px;
+  position: relative;
+  top: 7px;
+}
+.select_cs select {
+  border: none;
+  font-family: Gotham-bold;
+  font-size: 13px;
+}
+/* input elements end */
+/* Pages right ctas end */
+
+
+/* common input */
+input:read-only {
+  background-color: white !important;
+}
+.readonly {
+  position: relative;
+}
+.readonly input{
+  cursor: pointer;
+}
+.readonly .icon {
+  position: absolute;
+  color: #e87624;
+  right: 0px;
+  font-size: 10px;
+  top: 15px;
+  pointer-events: none;
+}
+/* common input end */
+/* colors */
+.sdwan_clr {
+  color: #e87624;
+}
+/* colors end*/
+
+
+
+/* apps page */
+.ss_step_foot {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  text-align: right;
+  right: 10px;
+}
+.new_app .form-control {
+  margin-bottom: 10px;
+  width: auto;
+}
+.cs_apps_list {
+  width: 332px;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  font-family: Gotham-Book;
+  font-size: 13px;
+  background-color: #fff;
+  font-weight: 900;
+  z-index: 9999999;
+  display: none;
+}
+.cs_apps_list.show {
+  display: block;
+}
+.cs_apps_list ul li {
+  padding: 10px 10px;
+}
+.cs_apps_list ul li:hover {
+  background-color: #EB6505;
+  color: white;
+  cursor: pointer;
+}
+.cs_apps_list ul li:hover img {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+/* apps page end */
+
+
+body ::-webkit-scrollbar {
+  height: 4px;
+  width: 3px;
+}
+/* Track */
+body ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+body ::-webkit-scrollbar-thumb {
+  background: #EB6505; 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+body ::-webkit-scrollbar-thumb:hover {
+  background: #b14d05; 
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #EB6505;
+}
+
+
+
+/* Main Cards  */
+.mCard .mCtitel{
+  background-color: white;
+  font-family: Gotham-Medium;
+  padding: 15px 25px;
+  font-size: 14px;
+}
+.mCard .mCbody {
+  background-color: #F1F1F1;
+  padding: 15px 25px;
+  position: relative;
+}
+  /* link cards */
+  .mCard.links .mCtitel {
+    background-color: #F1F1F1;
+    padding: 15px 25px 0px 25px;
+  }
+  .mCard.links .mCbody {
+    background-color: white;
+  }
+  /* .mCard.links .mCtitel button{ 
+    float: right;
+    position: relative;
+    bottom: 6px;
+  } */
+  .mCard.links ul {
+    list-style: none;
+    margin: 0px;
+    padding-left: 0px;
+    text-transform: uppercase;
+    display: inline;
+  }
+  .mCard.links .mCtitel ul li {
+    display: inline-flex;
+    margin: 0px 10px;
+    top: 4px;
+  }
+  .mCard.links ul li a {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #4C4C4C;
+    font-size: 12px;
+  }
+  .mCard.mCard.links ul li .router-link-active {
+    border-bottom: #e87624 solid 4px;
+  }
+  /* links cards end */
+    /* revClr cards */
+    .mCard.revClr .mCtitel {
+      background-color: #F1F1F1;
+      padding: 15px 25px 10px 25px;
+    }
+    .mCard.revClr .mCtitel .defColor{
+     font-family: Gotham-Bold;
+    }
+    .mCard.revClr .mCbody {
+      background-color: white;
+    }
+    .mCard.revClr .mCtitel button{ 
+      float: right;
+      position: relative;
+      bottom: 5px;
+    }
+  
+    /* links cards end */revClr
+/* Main Cards End */
+
+
+
+.subTopNav {
+  margin-top: 10px;
+  display: flow-root;
+  min-height: 17px;
+}
+.subTopNav .right_itms {
+text-align: right;
+} 
+.subTopNav .right_itms .clickAction {
+  color: #e87624;
+  font-size: 11px;
+  font-weight: 900;
+  font-family: Gotham-Book;
+  cursor: pointer;
+}
+.subTopNav .right_itms .clickAction.diabled {
+  color: #e87624;
+  font-size: 11px;
+  font-weight: 900;
+  font-family: Gotham-Book;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.subTopNav .breadcrumbs {
+  font-family: Gotham-Medium;
+  font-size: 14px;
+  float: left;
+}
+.subTopNav .breadcrumbs .icon-caret-right {
+  font-size: 7px;
+  position: relative;
+  top: -0.5px;
+}
+.subTopNav .breadcrumbs .active {
+  color: #e87624;
+  cursor: pointer;
+  text-transform: uppercase;
+
+}
+/* .subTopNav {
+  min-height: 17px;
+} */
+
+.Online {
+  color: #7b8422;
+}
+.Offline {
+  color: #db4f4f;
+}
+.Degraded {
+  color: #3d86c6;
+}
+.REACHABLE {
+  color: #7b8422;
+}
+.UNREACHABLE {
+  color: #db4f4f;
+}
+.Degraded {
+  color: #3d86c6;
+}
+
+
+
+/* right ctas */
+.rightCtas {
+  float: right;
+}
+.paddingRight10 {
+  padding-right: 10px;
+}
+/* right ctas end */
+
+/* .form-control {
+  display: initial;
+  width: auto;
+} */
+
+
+/* Favorite Star css */
+
+.star::after{
+  content: "☆";
+  color: #ea7926;
+  position: absolute;
+  top: 8px;
+  font-size: 20px;
+}
+.star_filled::after{
+  content: "\2605";
+  color: #ea7926;
+  position: absolute;
+  top: 8px;
+  font-size: 20px;
+}
+.fav_tip {
+  visibility: hidden;
+  width: 125px;
+  background-color: #3D84C4;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 3px 0;
+  font-size: 12px;
+  position: absolute;
+  z-index: 99999999999999999;
+  top: 43px;
+  left: -39px;
+  margin-left: -60px;
+}
+
+.fav_tip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 87%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #3D84C4 transparent;
+}
+
+.star:hover .fav_tip {
+  visibility: visible;
+}
+/* Favorite Star css end */
+
+.noSelect {
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}

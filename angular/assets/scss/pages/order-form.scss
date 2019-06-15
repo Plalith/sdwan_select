@@ -1,0 +1,84 @@
+.order-container{
+    .nav-tabs .nav-link{
+        font-family: $font-medium;
+        font-size: 0.8571rem;
+        padding: 0.7rem 1.9rem 0.9rem;
+        color: $tertiary-color;
+    }
+    .ct-card .card-header{
+        padding-bottom:0;
+        .right i{
+            font-size:1.2rem;
+        }
+    }
+    .ct-card .card-body{
+        padding:0;
+    }
+    .ct-card .card-footer{
+        padding-top:0;
+        padding-bottom:0;
+        .form-group{
+            padding: 0.8rem 1.8rem;
+            border-right:1px solid #ccc;
+            label{
+                font-family: $primary-font;
+            }
+            &:last-child{
+                border-right:1px solid $transparent;
+            }
+        }
+        .form-inline label{ 
+           display: block;
+        }
+        &.order-form-footer{
+            .form-inline{
+                min-height: 70px;
+                label{
+                    line-height:1rem;
+                    font-family: $font-medium;
+                    font-size: 0.7857rem;
+                    .text-link{
+                        font-size: 0.7857rem;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content{
+        height: 476px;
+        overflow-y:auto;
+        .mCustomScrollbar{
+            .mCSB_container{
+                padding:1.714rem 5.2rem;
+                margin-right: 0;
+            }
+            .mCSB_dragger{
+                height:220px;
+            }
+            .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+                width: 8px;
+                @include border-radius(0);
+            }
+            .mCSB_scrollTools .mCSB_draggerRail{
+                background: $transparent;
+            }
+        }
+        .tab-pane{
+            padding:0;
+            height: 476px;
+            h5{
+                font-family:$font-medium;
+                font-size: 0.8571rem;
+                color: $label-color;
+            }
+            p{
+               font-size: 0.785rem; 
+               font-family: $font-book;
+            }
+        }
+        .check-box-left{
+            font-family: $font-medium;
+            font-size: 0.7143rem;
+        }
+    }
+}

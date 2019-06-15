@@ -1,0 +1,14 @@
+{
+  "name": "sdwan_select_node_backend",
+  "version": "1.0.0",
+  "description": "sdwan node backend for testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lalith Kumar 9704620705",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

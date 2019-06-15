@@ -1,0 +1,239 @@
+/* STEP WIZARD */
+
+.step-wizard{
+    color: $white-color;
+    position: fixed;
+    left: 50%;
+    top: 5px;
+    z-index: 1040;
+    @include translate (-50%, 0);
+    
+    .step-item{
+        text-align: center;
+        font-size: 0.7142857142857143rem;
+        position: relative;
+        
+        &:last-child:after{
+            display: none;
+        }
+        &:after{
+            content: "";
+            height: 2px;
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            background:$heading-color;
+            left: 45px;
+            z-index: -1;
+        }
+        
+        .step-number-content {
+            min-width: 110px;
+            position: relative;
+            padding-top: 50px;
+            z-index: 2;
+            
+            .step-label{
+                display: table;
+                width: 100%;
+                min-height: 50px;
+                position: relative;
+                padding: 0px 0px 18px;
+                position:absolute;
+                bottom:25px;
+                left:50%;
+                @include translate (-50%, 0);
+
+                &:after{
+                    content:"";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 6px;
+                    height: 12px;
+                    width: 1px;
+                    background: $white-color;
+                }
+
+                > span{
+                    display:table-cell;
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                    line-height: 1.3;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: 0.7142857142857143rem;
+                    font-family:$font-book;
+                    
+                } 
+            }
+            .step-number{
+                height: 30px;
+                width: 30px;
+                background: $white-color;
+                display: block;
+                border:2px solid $orange-color;
+                @include border-radius(50%);
+                text-align: center;
+                margin: 0px auto;
+                color:transparent;
+                font-weight: 600;
+                line-height: 26px;
+                position: relative;
+                font-size: 0.7142857142857143rem;
+                font-family: $font-bold;
+                
+                &:after{
+                    font-family: 'tcl-icons';
+                    content: "\e90f";
+                    position: absolute;
+                    left:7px;
+                    top:1px;
+                    color: $orange-color;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        
+        
+        ul.nested-steps{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            margin-right:0.7142857142857143rem;
+            
+            display: none !important;
+            
+            li{
+                width: 70px;
+                position: relative;
+                
+                > span{
+                    display:block;
+                    
+                    &.sub-label{
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        font-family:$font-book;
+                        height: 30px;                        
+                        -webkit-box-align: center!important;
+                        -ms-flex-align: center!important;
+                        align-items: center!important;
+                        display: -webkit-box!important;
+                        display: -ms-flexbox!important;
+                        display: flex!important;
+                        -ms-flex-pack: center!important;
+                        justify-content: center!important;
+                    }
+                }
+                .steps-bullets{
+                    height: 10px;
+                    width:10px;
+                    background: $orange-color;
+                    margin: 0px auto;
+                    @include border-radius(50%);
+                    border:1px solid $white-color;
+                    margin-top: 5px;
+                }
+                
+                &:after{
+                    content: "";
+                    width:calc(100% + 20px);
+                    height: 4px;
+                    background: $orange-color;
+                    left: 50%;
+                    @include translate (-100%, 0);
+                    bottom: 4px;
+                    position: absolute;
+                    z-index: -1;
+                }
+                &.active{
+                    > span{
+                        font-family:$font-medium;
+                    }
+                    
+                    .steps-bullets{
+                        background: $extra-light-blue;
+                    }
+                }
+                &.active ~ li{
+                    &:after{
+                        display:none;    
+                    }
+                    
+                    .steps-bullets{
+                        background: $extra-light-blue;
+                    }
+                }
+                
+                
+            }
+            
+            
+        }
+        
+        &.current {
+            
+            &:after{
+                background:$extra-light-blue;
+            }
+            .step-number-content{
+                min-width:90px; 
+            }
+            .step-number{
+                border:3px solid $orange-color;
+                color: transparent;
+                
+                
+                &:after{
+                    content: "";
+                    height: 8px;
+                    width: 8px;
+                    background: $orange-color;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-left: -4px;
+                    margin-top: -4px;
+                    @include border-radius(50%);
+                }
+            }
+            
+            .step-label{
+                font-weight: 700;
+                
+                > span{
+                    font-family: $font-bold;
+                    font-size: 0.7857142857142857rem;
+                }
+            }
+            
+            ul.nested-steps{
+                display: -webkit-box!important;
+                display: -ms-flexbox!important;
+                display: flex!important;
+            }
+            
+        }
+        &.current ~ .step-item{
+            .step-number{
+                color:$dark-blue;
+                
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        
+        &.current ~ .step-item{    
+            &:after{
+                display: none;
+            }
+            
+        }
+    }
+    
+    
+}

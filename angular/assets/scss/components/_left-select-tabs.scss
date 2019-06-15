@@ -1,0 +1,46 @@
+
+/*Left Tabs select*/
+
+.left-tab-selection{
+    padding: 0;
+    margin: 0;
+    min-height: 25rem;
+    li{
+        list-style: none;
+        padding: 1.3rem 0;
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        a{
+            color: $primary-color;                 
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    .selected{
+        background: $orange-color;
+        color: $white-color;
+        margin: 0 -3rem 0 -1.39rem;
+        padding: 1.3rem;
+        border-bottom: 0;   
+        position: relative;
+        a{
+            color: $white-color;                 
+            &:hover{
+                color: $white-color;
+            }
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -0.85rem;
+            top: -1px;
+            width: 0; 
+            height: 2rem;
+            z-index: 1; 
+            border-top: 2rem solid transparent;
+            border-bottom: 2.1rem solid transparent; 
+            border-left: 1rem solid $orange-color; 
+        }
+    }
+}

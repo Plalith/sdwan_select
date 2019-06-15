@@ -1,0 +1,274 @@
+.get-quote-container{
+    .card-body{
+        min-height: 490px;
+    }
+}
+
+.get-quote-content{
+    -ms-flex: 0 0 720px;
+    flex: 0 0 720px;
+    max-width: 720px;
+}
+
+
+.quote-list{
+    
+    &.inner-padding{
+        padding:1.466rem;
+    }
+    ul{
+        margin:0px;
+        padding: 0px;
+        list-style-type: none;
+        
+        li{
+            padding: 1rem 1.466rem;
+            margin-bottom: 10px;
+            font-size: 0.7142857142857143rem;
+            font-family: $font-book;
+            @include box-shadow(0px 0px 8px rgba(0,0,0,0.2));
+            label{
+                margin-bottom: 0px;
+            }
+            h4{
+                margin-bottom: 0px;
+                font-size: 1rem;
+                font-family: $font-medium;
+                padding-left: 2.3rem;
+                color: $label-color;
+            }
+            .check-box{
+                position: absolute;
+                top:50%;
+                left: 10px;
+                @include transform(translate(0%,-50%));
+            }
+            p{
+                margin-bottom: 0px;
+                font-size: 0.7142857142857143rem;
+                padding-left: 2.3rem;
+                
+                &.green{
+                    color:$light-green;
+                }
+                &.red{
+                    color:$error-text;
+                }
+            }
+            .date-select{
+                margin-bottom:0.3rem;
+                margin-left:1rem;
+            }
+            .toolbar-icons{
+                >a {
+                    font-size: 1rem;
+                    color:$orange-color;
+                    margin-right: 1.5rem;
+                    display: inline-block;
+                    text-decoration: none;
+                    vertical-align: middle;
+                    &.datepicker{
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    &:last-child, &.datepicker{
+                        margin-right: 0rem;
+                    }
+                }
+                
+                >span{
+                    padding-left:1.0714285714285714rem;
+                    padding-right:1.7857142857142858rem;
+                    font-size: 12px;
+                    font-family: $font-book;
+                }
+                >strong{
+                    font-family: $font-medium;
+                    font-weight: 100;
+                }
+            }
+            
+            [class^="col-"]{
+                border-right: 1px solid #ddd;
+                
+                &:last-child{
+                    border-right: none;
+                }
+            }
+            
+            
+            &.current, &:hover{
+                background: $orange-color;
+                color:$white-color;
+                
+                [class*="col-"]{
+                    border-color:$white-color;
+                }
+                .date-select input{
+                    color: #fff;
+                    background: url(../images/calendar-white.svg) right no-repeat;
+                    background-size: 1rem;
+                }
+                h4{
+                    color: $white-color;
+                }
+                
+                .toolbar-icons{
+                    >a{
+                        color:$white-color;
+                    }
+                }
+                .checkmark{
+                    border-color:$white-color;
+                    background: $white-color;
+                    
+                    &:after{
+                        border-color:$orange-color;
+                    }
+                }
+                
+                p{
+                    &.green{
+                        color:$white-color;
+                    }
+                    &.red{
+                        color:$white-color;
+                    }
+                }
+            }
+            
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.get-quote-summary{
+    .form-control{
+        background:$transparent;
+        color:$white-color;
+        font-family: $font-book;
+        min-width: 60px;
+        
+        option{
+            color:$primary-color;
+        }
+    }
+    .select{
+        &:before{
+            border-top-color:$white-color;
+        }
+    }
+    .price-summary{
+        margin-top: 25px;
+        font-size: 0.8rem;
+        font-family: $font-book;
+       
+        .heading{
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+            padding-bottom: 10px;
+            font-family: $font-medium;
+            font-size: 0.85rem;
+        }
+        .amt{
+            margin-top: 10px;
+            opacity: 0.8;
+            font-size: 0.85rem;
+            font-family: $font-book;
+        }
+    }
+    .hidden-content{
+        background: rgba(0,0,0,0.5);
+        margin-left: -1.429rem;
+        margin-right: -1.429rem;
+        padding:1.429rem;
+        display: none;
+    }
+    .hidden-content.hidden-content-show{
+        display: block;
+    }
+}
+
+.switch-toggle label{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 40px;
+    height: 14px;
+    background: $white-color;
+    @include border-radius(20px);
+    cursor: pointer;
+    
+    &:before,
+    &:after{
+        position: absolute;
+        font-size:0.857rem;
+        font-family: $primary-font;
+        top: 50%;
+        @include transform(translate(0%,-50%));
+    }
+    
+    &:before{
+        content: attr(data-left);
+        right: 100%;
+        margin-right: 5px;
+    }
+    &:after{
+        content: attr(data-right);
+        left: 100%;
+        margin-left:5px;
+    }
+    
+    span{
+        position:absolute;
+        height: 20px;
+        width:20px;
+        background: $orange-color;
+        right: 100%;
+        margin-right: -20px;
+        top:50%;
+        margin-top: -10px;
+        display: block;
+        @include border-radius(50%);
+        @include box-shadow(0px 2px 5px 1px rgba(0, 0, 0, 0.2));
+        @include transition(150ms ease-in 0s);
+    }
+    
+    input[type="checkbox"]{
+        display: none;
+        
+        &:checked{
+            + span{
+                right: 0%;
+                margin-right:0px;
+            }
+        }
+    }
+}
+
+.info-error{
+    font-size:0.8571428571428571rem;
+    color:$error-text;
+    font-family: $font-medium;
+    position: relative;
+    padding-left: 2rem;
+    
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "\e91a";
+        font-family: 'tcl-icons' !important;
+        font-size: 1.2rem;
+    }
+    
+    p{
+        font-family: $font-medium;
+        margin-bottom: 0.3rem;
+        
+        &:last-of-type{
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+/* Abstracts - variables, functions, mixins, placeholders, etc */
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+/* Base - base, reset, typography, etc */
+@import 'base/base';
+@import 'base/typography';
+
+/* Components - buttons, carousel, dropdown, etc */
+@import 'components/expand-panel';
+@import 'components/buttons-components';
+@import 'components/step-wizard';
+@import 'components/_form-elements';
+// @import 'components/_forms';
+@import 'components/card';
+@import 'components/tooltip';
+@import 'components/modal';
+@import 'components/slick';
+@import 'components/left-select-tabs';
+@import 'components/nav-tabs';
+@import 'components/sidenavbar';
+@import 'components/alert';
+
+/* layout - navigation, grid, header, footer, sidebar, forms, etc */
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';
+
+/* Pages - home, login, other pages names etc */
+@import 'pages/landing-page.scss';
+@import 'pages/add-locations.scss';
+@import 'pages/sales-order.scss';
+@import 'pages/site-list.scss';
+@import 'pages/get-quote.scss';
+@import 'pages/order-form.scss';
+@import 'pages/customer-configuration.scss';
+@import 'pages/congratulations.scss';
+@import 'pages/solution-details.scss';
+@import 'pages/dashboard.scss';
+@import 'pages/dashboard-company-profile.scss';
+@import 'pages/dashboard-configuration.scss';
+@import 'pages/dashboard-faq.scss';
+
+
+
+/* Themes - theme, other color updates etc */
+
+
+

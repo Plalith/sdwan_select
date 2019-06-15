@@ -1,0 +1,113 @@
+.bold-text{
+    font-family: $font-bold;
+}
+.orderconfirm{
+    .row{
+        min-height:35px;
+        .orderid{
+            color: $heading-color;
+            font-family: $font-bold;
+        }
+        .order-labels{
+            font-family: $font-book;
+            font-size: 0.8571rem;
+        }
+    }    
+    [class^="col"]{
+        border-right: 1px solid #ddd;
+        min-height: 37px; 
+        &:last-child{
+            border-right: none;
+        }
+    }
+}
+
+.order-list{ 
+    .title{
+        color: $label-color;
+    }
+    &.inner-padding{
+        padding:1.466rem;
+    }
+    .toolbar-icons{
+        >a {
+            font-size: 1rem;
+            color:$orange-color;
+            margin-right: 1rem;
+            display: inline-block;
+            &:hover{
+                text-decoration: none;
+            }
+            &:last-child{
+                margin-right: 0rem;
+            }
+        }
+    }
+    ul{
+        margin:0px;
+        padding: 0px;
+        list-style-type: none;
+        
+        li{
+            padding: 1rem 1.466rem;
+            margin-bottom: 10px;
+            font-size: 0.7143rem;
+            @include box-shadow(0px 0px 8px rgba(0,0,0,0.2));
+            label{
+                margin-bottom: 0px;
+            }
+            h4{
+                margin-bottom: 0px;
+                font-size: 1rem;
+                text-align: center;
+                font-family: $font-medium;
+                color: $label-color;
+            }
+            p{
+                margin-bottom: 0px;
+                font-size: 0.75rem;
+                padding-left: 1.2rem;
+                
+                &.green{
+                    color:$light-green;
+                }
+                &.red{
+                    color:$red-color;
+                }
+            }
+            [class^="col"]{
+                border-right: 1px solid #ddd;
+                min-height: 35px;
+                font-family: $font-book;
+                
+                &:last-child{
+                    border-right: none;
+                    min-height: 0;
+                }
+            }
+            
+            &.current{
+                background: $orange-color;
+                color:$white-color;
+                
+                [class*="col"]{
+                    border-color:$white-color;
+                }
+                
+                .toolbar-icons{
+                    >a{
+                        color:$white-color;
+                    }
+                }
+            }
+        }
+    }
+    .card-body-title{
+        font-family: $font-medium;
+        font-size: 0.7857rem;   
+    }
+    .card-body-content{
+        font-family: $font-book;
+        font-size: 0.7857rem;
+    }
+}

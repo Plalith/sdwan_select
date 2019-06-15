@@ -1,0 +1,238 @@
+.purchased-item{
+    padding: 1rem 1.4285714285714286rem;
+    @include box-shadow(0px 1px 4px rgba(0, 0, 0, 0.2));
+    margin-bottom: 0.7142857142857143rem;
+    .purchased-id{
+        max-width:75px;
+        min-width:75px;
+        padding-right: 0;
+        label{
+            font-family: $font-medium;
+            font-size: 0.8571428571428571rem;
+            margin: 0;
+            padding: 0;
+        }
+        small{
+            display: block;
+        }
+    }
+    
+    .purchased-date{
+        font-size: 0.7142857142857143rem;
+        font-family: $font-medium;
+        max-width: 95px;
+        min-width: 95px;
+        padding: 0.7rem 0.7142857142857143rem;
+        border-left: 1px solid $form-bg;
+        border-right: 1px solid $form-bg;
+        text-align: center;
+    }
+    .purchased-info-link{
+        text-align: right;
+        a{
+            color:$orange-color;
+            text-transform: uppercase;
+            font-family: $font-bold;
+            font-size:0.7142857142857143rem;
+            text-decoration: none;
+            
+            &:hover{
+                text-shadow: 0px 2px 4px $light-grey-color;
+            }
+        }
+    }
+    
+    .purchased-step-wizard{
+        > ul{
+            margin: 0px;
+            padding: 0;
+            list-style-type: none;
+            white-space: nowrap;
+            
+            > li{
+                text-align:center;
+                position: relative;
+                
+                &.completed{
+                    > .big-steps-data span{
+                        border:1px solid $orange-color;
+                        position: relative;
+                        
+                        &:before{
+                            content: "\e90f";
+                            font-family: 'tcl-icons' !important;
+                            position: absolute;
+                            left: 1px;
+                            top: 1px;
+                            color:$orange-color;
+                            font-size:0.4rem;
+                        }
+                        
+                    }
+                }
+                
+                &.current{
+                    > .big-steps-data label{
+                        font-family: $font-medium;
+                    }
+                    
+                    > .big-steps-data span{
+                        border:1px solid $orange-color;
+                        position: relative;
+                        
+                        &:before{
+                            content: "";
+                            height: 4px;
+                            width: 4px;
+                            position: absolute;
+                            left: 3px;
+                            top:3px;
+                            background: $orange-color;
+                            @include border-radius(50%);
+                        }
+                        
+                    }
+                }
+                
+                > .big-steps-data{
+                    min-width:100px;
+                    position: relative;
+                    z-index: 2;
+                }
+                > .big-steps-data label{
+                    font-size: 0.6428571428571429rem;
+                    text-transform: uppercase;
+                    font-family: $font-book;
+                }
+                
+                &:after{
+                    content: "";
+                    height: 2px;
+                    width: calc(100% + 10px);
+                    background: $form-bg;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 45px;
+                }
+                
+                &:last-child:after{
+                    display: none;
+                }
+                
+                > .big-steps-data span{
+                    height:12px;
+                    width:12px;
+                    @include border-radius(50%);
+                    background: $white-color;
+                    border:1px solid #9d9d9d;
+                    margin: 0px auto;
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                }
+                
+                &.current .big-steps-data + .sub-steps{
+                    li{
+                        &:after{
+                            background: transparent;
+                        }
+                        > span{
+                            border:1px solid #9d9d9d;
+
+                            &:before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .sub-steps{
+        margin: 0px;
+        padding: 0;
+        list-style-type: none;
+        white-space: nowrap;
+        
+        > li{
+            text-align:center;
+            position: relative;
+            min-width: 105px;
+            > label{
+                font-size: 0.6428571428571429rem;
+                font-family: $font-book;
+            }
+            
+            &:after{
+                content: "";
+                height: 2px;
+                width: 100%;
+                background:$orange-color;
+                position: absolute;
+                bottom: 4px;
+                left:50%;
+                z-index: 1;
+                @include transform(translate(-100%, 0));
+                margin-left:4px;
+            }
+            
+            > span{
+                height:7px;
+                width:7px;
+                @include border-radius(50%);
+                background: $white-color;
+                border:1px solid $orange-color;
+                margin: 0px auto;
+                margin-top: 4px;
+                display: block;
+                position: relative;
+                z-index: 2;
+                
+                &:before{
+                    content: "\e90f";
+                    font-family: 'tcl-icons' !important;
+                    position: absolute;
+                    left: 1px;
+                    top: 1px;
+                    color:$orange-color;
+                    font-size:0.2rem;
+                }
+            }
+            &.current{
+                > label{
+                    font-family: $font-medium;
+                }
+                > span{
+                    height:9px;
+                    width:9px;
+                    margin-top: 3px;
+                    position: relative;
+                    
+                    &:before{
+                        content: "";
+                        height: 3px;
+                        width: 3px;
+                        position: absolute;
+                        left: 2px;
+                        top:2px;
+                        background: $orange-color;
+                        @include border-radius(50%);
+                    }
+                }
+            }
+            &.current ~ li{
+                &:after{
+                    background: transparent;
+                }
+                > span{
+                    border:1px solid #9d9d9d;
+                    
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

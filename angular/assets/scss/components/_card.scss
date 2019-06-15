@@ -1,0 +1,140 @@
+
+/* Card Componant */
+.ct-card{
+    @include card-varient($tertiary-color,$light-gray, $primary-color, $white-color);
+    .card-header{
+        padding: 0.6rem 1.4666666666666666rem;
+        min-height: 54px;
+        border-bottom: none;
+        
+        .media-body{            
+            -webkit-box-flex: initial;
+            -ms-flex: auto;
+            flex: auto;
+        }
+        
+        .title{
+            font-family:$font-medium;
+            font-size: 1rem;
+        }
+        
+        .right{
+            font-size:1rem;
+            
+            i{
+                color:$heading-color;
+            }
+            a{
+                color:$heading-color;
+                text-decoration: none;
+                font-size: 0.7142857142857143rem;
+                font-family: $font-bold;
+                text-transform: uppercase;
+                &:hover{
+                    text-decoration: none;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                }
+                &.white-icon{
+                    color:$white-color;
+                    
+                    i{
+                        color:$white-color;
+                    }
+                }
+            }
+        }
+        i {
+            font-size:0.8rem;
+        }
+        
+        &.collapse-toggle{
+            cursor: pointer;
+        }
+        
+        &.collapsed{
+            .icon-up{
+                display: block;
+                @include transform(rotate(180deg));
+            }
+        }
+    }
+    .card-body{
+        padding:1.4666666666666666rem;
+        
+        &.padding-none{
+            padding: 0px;
+        }
+    }
+    .card-footer{
+        @extend .card-header;
+        border-top:none;
+    }
+}
+.blue-card{
+    background: $transparent;
+    @include card-varient($white-color,$panel-heading-blue, $white-color, $panel-body-blue);
+    
+    .card-header{
+        .right a {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+            margin-bottom: -4px;
+            i{
+                font-size: 1.2rem;
+            }
+        }
+    } 
+}
+
+.quote-summary-container{
+    -ms-flex: 0 0 340px;
+    flex: 0 0 340px;
+    max-width: 340px;
+}
+
+/*Configuration card*/
+.custom-card{
+    @include card-varient($tertiary-color,$light-gray, $primary-color, $white-color);
+    > .card-header:first-child{
+        font-family: $font-medium;
+        padding: 1.1rem 1.25rem;
+        border-bottom: 0;
+    }
+    > .card-body{
+        padding: 0 1.429rem 0.01rem;
+    }
+}
+
+/*Card with shadow*/
+.shadow-card{
+    @include box-shadow($shadows);
+    border: 0;
+    margin: 0 0 1.429rem 0;
+    &:first-child{
+        margin-top: 1.429rem;
+    }
+    > .card-header:first-child{
+        font-family: $font-medium;
+        padding: 0.9rem 0;
+        margin: 0 1.429rem;
+        background: none;
+    }
+    h4{
+        font-size: 12px;
+        font-family: $font-medium;
+        margin-bottom: 1rem;
+    }
+}
+
+.config-more-info{
+    margin-top: 1.2rem;
+    font-size: 12px;
+    h5{
+        font-family: $font-medium;
+        font-size: 12px;
+    }
+}
+
+    
+

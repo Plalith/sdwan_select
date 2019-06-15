@@ -1,0 +1,231 @@
+.main-btn{
+    text-align: center; 
+    padding:1px 0.625rem 0;
+    outline: none;
+    font-family: $primary-font; 
+}
+.large-btn{
+    @extend .main-btn;
+    min-width:9.643rem;
+    text-transform: uppercase;
+    font-size:0.7143rem;
+    height: 2.143rem;  
+    @include border-radius(0.3125rem);
+}
+.active-btn{
+    @extend .large-btn;
+    background-color: $heading-color;
+    color: $white-color;
+    border: 2px solid $heading-color;
+    transition: all 0.3s ease-out;
+}
+.active-btn:focus, .secondary-outline-btn:focus, .secondary-dark-outline-btn:focus{ 
+    @extend .large-btn;
+    background-color: darken( $heading-color, 10% );
+    border: 2px solid darken( $heading-color, 10% );
+    color: darken( $white-color, 10% );
+    @include box-shadow(none);
+}
+.inactive-btn{
+    @extend .large-btn;
+    color: rgba( $white-color, 0.5 );
+    background-color: rgba( $heading-color, 0.5 );
+    border: 2px solid rgba( $heading-color, 0 );
+    pointer-events: none; 
+}
+.active-btn:hover, .secondary-outline-btn:hover{
+    @extend .active-btn;
+    color: $white-color;
+    @include box-shadow(0px 2px 4px $light-grey-color);
+}
+.inactive-btn:hover, .inactive-btn:focus{
+    color: rgba( $white-color, 0.5 );
+    @include box-shadow(none);
+}
+.secondary-outline-btn{
+    @extend .large-btn;
+    border: 2px solid $heading-color;
+    background-color: transparent;
+    color: $heading-color;
+    transition: all 0.3s ease-out;
+}
+.secondary-outline-inactive-btn{
+    @extend .large-btn;
+    border: 2px solid rgba( $heading-color, 0.5 );
+    color: rgba( $heading-color, 0.5 );
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.secondary-outline-inactive-btn:hover, .secondary-outline-inactive-btn:focus{
+    @extend .secondary-outline-inactive-btn;
+    @include box-shadow(none);
+}
+
+.mini-btn{
+    @extend .main-btn;
+    min-width: 6.071rem;
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    height: 1.429rem;  
+    @include border-radius(0.1875rem);
+}
+.mini-active-btn{
+    @extend .mini-btn;
+    background-color: $heading-color;
+    color: $white-color;
+    border: 2px solid $heading-color;
+    transition: all 0.3s ease-out;
+}
+.mini-active-btn:focus, .secondary-mini-outline-btn:focus, .mini-dark-outline-btn:focus{
+    @extend .mini-btn;
+    background-color: darken( $heading-color, 10% );
+    color: darken( $white-color, 10% );
+    @include box-shadow(none);
+    border: 2px solid darken( $heading-color, 10% );
+}
+.mini-inactive-btn{
+    @extend .mini-btn;
+    color: rgba( $white-color, 0.5 );
+    background-color: rgba( $heading-color, 0.5 );
+    pointer-events: none;
+}
+.mini-active-btn:hover, .secondary-mini-outline-btn:hover, .secondary-mini-outline-btn:hover, .mini-dark-outline-btn:hover{
+    @extend .mini-btn;
+    color: $white-color;
+    border: 2px solid $heading-color;
+    background-color: $heading-color;
+    @include box-shadow(0px 2px 4px $light-grey-color);
+}
+.mini-inactive-btn:hover, .mini-inactive-btn:focus{
+    color: rgba( $white-color, 0.5 );
+    @include box-shadow(none);
+}
+.secondary-mini-outline-btn{
+    @extend .mini-btn;
+    border: 2px solid $heading-color;
+    background-color: transparent;
+    color: $heading-color;
+    transition: all 0.3s ease-out;
+}
+.secondary-mini-outline-inactive-btn{
+    @extend .mini-btn;
+    border: 2px solid rgba( $heading-color, 0.5 );
+    color: rgba( $heading-color, 0.5 );
+    background-color: transparent;
+    pointer-events: none;
+    @include box-shadow(none);
+}
+.secondary-mini-outline-inactive-btn:hover, .secondary-mini-outline-inactive-btn:focus{
+    @extend .secondary-mini-outline-inactive-btn;
+}
+.secondary-dark-outline-btn{
+    @extend .large-btn;
+    border: 2px solid $heading-color;
+    background-color: transparent;
+    color: $white-color;
+}
+.secondary-dark-outline-btn:hover{
+    @extend .active-btn;
+}
+.secondary-dark-outline-inactive-btn{
+    @extend .large-btn;
+    border: 2px solid rgba( $heading-color, 0.5 );
+    background-color: transparent;
+    color: rgba( $white-color, 0.5 );
+    pointer-events: none;
+    &:hover{
+        @include box-shadow(none);
+    }
+    &:focus{
+        @include box-shadow(none);
+    }
+}
+.mini-dark-outline-btn{
+    @extend .mini-btn;
+    border: 2px solid $heading-color;
+    background-color: transparent;
+    color: $white-color;
+    transition: all 0.3s ease-out;
+}
+.mini-dark-outline-inactive-btn{
+    @extend .mini-btn;
+    border: 2px solid rgba( $heading-color, 0.5 );
+    background-color: transparent;
+    color: rgba( $white-color, 0.5 );
+    pointer-events: none;
+    &:focus{
+        @include box-shadow(none);
+    }
+}
+.mini-white-active-btn{
+    @extend .mini-btn;
+    color: $white-color;
+    background-color: transparent;
+    border: 2px solid $white-color;
+    transition: all 0.3s ease-out;
+}
+.mini-white-inactive-btn{
+    @extend .mini-btn;
+    color: rgba( $white-color, 0.5 );
+    background-color: transparent;
+    border: 2px solid rgba( $white-color, 0.5 );
+    pointer-events: none;
+    &:focus{
+        @include box-shadow(none);
+    }
+}
+.mini-white-active-btn:hover{
+    @extend .mini-btn;
+    color: $heading-color;
+    background-color: $white-color;
+    @include box-shadow(0px 2px 4px $light-grey-color);
+}
+.mini-white-active-btn:focus{
+    @extend .mini-btn;
+    color: $heading-color;
+    background-color: lighten( $white-color, 20% );
+    @include box-shadow(none);
+}
+
+.text-link{
+    color: $heading-color;
+    font-size:0.8571rem;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+.text-link-inactive{
+    color: rgba( $heading-color, 0.5 );
+    font-size: 0.8571rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+.text-link:hover{
+    @extend .text-link;
+    text-decoration: none;
+    text-shadow: 0px 2px 4px $light-grey-color; 
+}
+.text-link:focus{
+    @extend .text-link;
+    text-decoration: none;
+    color: darken( $heading-color, 10% );
+    text-shadow: none;
+}
+.text-link-inactive:hover, .text-link-inactive:focus{
+    @extend .text-link-inactive;
+    text-decoration: none;
+}
+.tag-20-light{
+    @include border-radius(1.25rem);
+    color: $white-color;
+    background-color: rgba( $white-color, 0.2 );
+    font-size:0.5rem;
+    padding:0.3125rem 0.625rem;
+}
+.tag-50-light{
+    @include border-radius(1.25rem);
+    color: $white-color;
+    background-color: rgba( $white-color, 0.5 );
+    font-size:0.5rem;
+    padding:0.3125rem 0.625rem;
+}

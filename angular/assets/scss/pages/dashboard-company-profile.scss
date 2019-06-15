@@ -1,0 +1,192 @@
+.company-profile-container{
+    .company-profile-content{
+        min-height: 50rem;
+    }
+    .toggle-btn{
+        position:relative;
+        @include border-radius(0);
+        i{
+            position: absolute;
+            top:0px;
+            right:0;
+            left:0;
+            line-height: 16px;
+            font-style: normal;
+            &:before{
+                margin-top: -2px;
+            }
+        }
+    }
+    .ct-card{
+        margin-bottom: 1.2rem;
+        .card-header{
+            .title{
+                margin:0;
+            }
+        }
+    }
+    .accounts-card{
+        min-height: auto;
+        .card-body{
+            min-height: 8rem;
+        }
+    }
+    .company-profile-details{
+       .tab-content >.ct-card{
+           margin-top:0;
+           height:inherit;
+        }
+    }
+    .services-list {
+        min-height:auto;
+        .custom-tabs .nav-tabs{
+        /*padding-left:1.25rem;
+        padding-right:1.25rem; */  
+            .nav-link{
+                padding:0.98rem 1.4rem 0.98rem 0;
+                font-size: 0.7857142857142857rem;
+                &.active{
+                    padding:0.98rem 1.25rem 0.98rem 1.25rem;
+                    margin:-1px -1.5rem 0px 0; 
+                    &:before{
+                        right:-10px;
+                    }
+                }
+            }
+        } 
+    }        
+}
+.up-arrow:before{
+    content:"\e90a";
+    font-family: 'tcl-icons' !important;
+}
+.down-arrow:before{
+    content:"\e905";
+    font-family: 'tcl-icons' !important;
+}
+.company-profile-content{
+    .ct-card{
+        @include box-shadow(0px 1px 4px rgba(0, 0, 0, 0.2));
+        margin-bottom: 1.2rem;
+        margin-top:0.7142857142857143rem;
+        .card-header{
+            .title{
+                margin:0;
+            }
+            a{
+                font-size: 0.7857142857142857rem;
+                text-decoration: none;
+                color: $orange-color;
+                font-family: $font-medium;
+                &:hover{
+                    text-decoration: none;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                }
+            }
+        }
+        .card-body{
+            h5{
+                font-family: $font-medium;
+                font-size:0.8571428571428571rem; 
+            }
+            p{
+                margin-bottom: 0;
+            }
+            ul li{
+                p{
+                    margin-bottom: 0;
+                }
+                a{
+                    color: $orange-color;
+                    cursor:pointer;
+                }
+            }
+            .form-group{
+                margin-bottom: 1.2rem;
+                label{
+                    font-family: $font-medium;
+                    font-size:0.8571428571428571rem;
+                }
+            }
+        }
+    }
+    .documents-card{
+        .card-body{
+            &.padding-none{
+                padding:0;
+            }
+            ul{
+                padding:0;
+                margin: 0;
+                li{
+                    margin-top: 1.4666666666666666rem;
+                    
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+            } 
+        }
+    }
+    .team-details-card{
+        .list-group{
+            padding:0;
+            .list-group-item{
+                border:none;
+                @include border-radius(0);
+                padding: 0;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid #ececec;
+                &:last-child{
+                   border-bottom: none;
+                   padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+
+/* dashboard company sites page */
+.company-sites-container{
+    .add-location-list ul {
+        li{
+            padding:0 1.4666666rem;
+            
+            .card-header{
+                padding: 0;
+                background: transparent;
+                label,label:focus{
+                    cursor:pointer;
+                }
+            }
+            .card-body{
+                border-top: 1px solid $placeholder-color;
+            }
+            a {
+                text-decoration: none;
+                i{
+                    color: $orange-color;
+                    font-size: 1rem;
+                    display: inline-block; 
+                }
+            }
+        }
+    }
+    .load-locations>.card-header{
+        padding-bottom: 0;
+    }
+    .site-details-container .service-desc-wrapper{
+        .ct-inline-form{
+            .form-title{
+                font-family: $font-medium;
+            }
+            .form-control{
+                font-family: $font-book;
+            }
+        } 
+    } 
+}

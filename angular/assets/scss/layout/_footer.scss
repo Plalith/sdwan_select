@@ -1,0 +1,26 @@
+footer{
+    position: relative;
+    z-index: 2;
+    background: $deep-dark-blue;
+    padding: 2rem;
+    color: $white-color; 
+    margin-top: 2rem;
+    font-size: 12px;
+}
+.footer-nav{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+        display: inline-block;
+        border-left: 1px solid $white-color;
+        padding: 0 0.75rem;
+        line-height: 1rem;
+        &:first-child{
+            border-left: 0;
+        }
+        a{
+            color: $white-color;
+        }
+    }
+}

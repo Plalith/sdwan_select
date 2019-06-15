@@ -1,0 +1,23 @@
+
+.primary-navigation{
+    margin-right:2.142857142857143rem;
+    a.nav-link{
+        color: $white-color;
+        padding:1.50rem 1.4285714285714286rem 0.7142857142857143rem;
+        font-size: 0.6428571428571429rem;
+        text-transform: uppercase;
+        font-family: $font-medium;
+        &:hover{
+           // background: $orange-color;
+           color: #123c61;
+        }
+        span{
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+}
+
+//123c61 092341

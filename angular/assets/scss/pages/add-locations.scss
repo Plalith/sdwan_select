@@ -1,0 +1,232 @@
+.ct-card{
+    > .address-form{
+        padding-bottom: 4.533rem;
+    }
+}
+.address-form{
+    position: relative;
+    min-height: 497px;
+    font-size: 1rem;
+
+    .bottom-btn{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        padding: 1.466rem;
+    }
+    label{
+        margin-bottom: 0px;
+        font-family: $font-medium;
+        font-size:0.7857142857142857rem;
+        color: $label-color;
+    }
+    .form-control{
+        font-size:0.8571428571428571rem;
+        font-family:$font-book;
+        color:$primary-color;
+       /* font-family: $bold-font;*/
+    }
+    .form-group{
+        margin-bottom: 1.8rem;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+}
+.location-container {
+    .add-location-grid{
+        -ms-flex: 0 0 220px;
+        flex: 0 0 220px;
+        max-width: 220px;
+    }
+    .location-section{
+        -ms-flex: 0 0 255px;
+        flex: 0 0 275px;
+        max-width: 275px;
+    }
+}
+
+.location-list-container{
+    overflow: auto;
+    height: 497px;
+    
+    .location-list{
+        .media{
+            padding: 1.466rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+
+            small{
+                font-family: $font-medium;
+                color:#fff;
+                font-size: 0.642rem;
+                margin-bottom: 10px;
+                display: block; 
+            }
+            p{
+                font-size:0.857rem;
+                margin: 0;
+                color:#eee;
+                font-family: $font-book;
+            }
+
+            .btn-link{
+                padding: 0px;
+                color: $orange-color;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+            
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.load-locations{
+    .locations-form{
+        background: $light-gray;
+        color:$primary-color;
+        padding: 1.466rem;
+        .mutliSelect{
+            height: 130px;
+        }
+    }
+    
+    .modal-body{
+        padding: 0px;
+    }
+    
+    
+}
+
+.slider-nav{
+    background: $light-gray;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .nav-item{
+        text-align: center;
+        padding: 0.7rem 1.466rem 0.9rem;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        text-transform: uppercase;
+        color:$primary-color;
+        font-family:$primary-font;
+        font-size: 0.8rem;
+
+
+
+
+        &.slick-current.slick-active{
+            &:after{
+                content: "";
+                height: 3px;
+                width: 100%;
+                background: $orange-color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .slick-arrow{
+        position: absolute;
+        top:50%;
+        padding: 0px;
+        border:none;
+        @include transform(translate(0%, -50%));
+        cursor: pointer;
+        color:$orange-color;
+        font-size: 0.8rem;
+        width: 20px;
+        text-align: center;
+        margin-top: -7px;
+
+        &.right{
+            right: 0px;
+            
+            &.slick-disabled{
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+        &.left{
+            left: 0px;
+            
+            &.slick-disabled{
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+    }
+    }
+
+*{
+    outline: none;
+}
+
+.add-location-list {
+    padding: 1.466rem;
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        
+        li{
+            padding: 1.466rem;
+            font-family:$font-book;
+            @include box-shadow(0px 0px 8px rgba(0,0,0,0.2));
+            margin-bottom: 10px;
+            font-size: 0.857rem;
+            
+            .check-box{
+                margin-bottom: 0px;
+            }
+            
+            .check-box input:checked ~ .checkmark {
+                background-color: $orange-color;
+
+            }
+            .checkmark{
+                &:after{
+                    border-color:$white-color;
+                }   
+            }
+        }
+    }
+    
+    
+}
+
+.overview-map{
+    height: 455px;
+    width: 100%;
+    
+    .map-text{
+        margin: 1rem 0rem;
+        
+        .form-group{
+            margin-bottom: 1.8rem;
+            
+            label{
+                font-family:$font-medium;
+                font-size: 0.785rem;
+                margin-bottom: 0px;
+            }
+            
+            .form-control{
+                font-size:0.857rem;
+                /*font-family: $bold-font;*/
+            }
+            
+            &:last-child{
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}

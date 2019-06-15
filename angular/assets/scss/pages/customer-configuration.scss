@@ -1,0 +1,57 @@
+.services-list{
+    min-height: 40rem;
+    .card-body{
+        padding:0;
+    }
+    .custom-tabs .nav-tabs{
+        padding-right:0;
+        padding-left: 0;
+        text-align: left;
+        background: none;
+        .nav-link{
+            text-align: left;
+            @include border-radius(0);
+            padding:1.37rem 0;
+            margin: 0 1.4rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            text-transform: initial;
+            &.active{
+                background-color:$orange-color;
+                color: $white-color;
+                margin: -1px -1.4rem 0 0;
+                z-index: 5;
+                border-bottom: 0px;
+                padding:1.37rem  1.4rem;
+                &:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: -1rem;
+                    top: -1px;
+                    width: 0;
+                    height: 2.2rem;
+                    z-index: 1;
+                    border-top: 2rem solid transparent;
+                    border-bottom: 2.1rem solid transparent;
+                    border-left: 1rem solid $orange-color; 
+                }
+            }
+        }
+    }
+    .custom-card > .card-body{
+        padding-bottom:1.45rem;
+    } 
+    
+}
+.vertical-navigation{
+    -ms-flex: 0 0 340px;
+    flex: 0 0 340px;
+    max-width: 340px;
+}
+
+.expand-panel .collapse .check-box input:checked ~ .checkmark{
+    background-color:$orange-color; 
+}
+.expand-panel .collapse .check-box-left .checkmark:after{
+    border-color: $white-color;
+}

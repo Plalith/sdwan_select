@@ -1,0 +1,123 @@
+.expand-panel{
+    background: $white-color;
+    .card{
+        border: 0;
+        color:$tertiary-color;
+        
+        .card-header{
+            background: none;
+            font-size: 14px;
+            font-family:$primary-font;
+            margin: 0 1.25rem;
+            padding: 1rem 0;
+        }
+        .card-bottom{
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+            padding-top: 1rem;
+            span{
+                font-weight: 600;
+                font-family: $font-book;
+                font-size: 12px;
+            } 
+        }
+        h3{
+            font-size: 12px;
+            padding: 1.2rem 0 0.5rem;
+            font-family: $primary-font;
+            margin-bottom: 0;
+        }
+        .expand-card-img{
+            width: 80%;
+            margin: 0.7rem;
+        }
+        .add-custom-config{
+            width: 7.5rem;
+            margin: 0.6rem auto;
+            cursor: pointer;
+        }
+        ul li{
+            padding: 0.5rem 0 0.35rem;
+            line-height: 1.5rem;
+            font-family: $font-book;
+        }
+    }
+    .selected{
+        background: $light-gray; 
+        margin-bottom: 4px;
+        @include box-shadow($shadow-bottom); 
+        .check-box-right{
+            background: $orange-color;
+            color: $white-color;
+            margin: 0;
+            padding: 0.85rem 1rem;
+            .checkmark {
+                right: 1.5rem;
+                left: auto;
+                border: 2px solid $white-color;
+                background: $white-color;
+                &:after {
+                    left: 0.25rem;
+                    top: -0.03rem;
+                    width: 0.35rem;
+                    height: 0.75rem;
+                    border: solid $orange-color;
+                    border-width: 0 0.15rem 0.11rem 0;
+                    @include transform (rotate(40deg));
+                }
+            }
+        }  
+    }
+    .expand-btn{
+        width: 100%;
+        background: $orange-color;
+        color: $white-color;
+        @include border-radius(0);
+        padding: 0;
+        display: block;
+    }
+}
+
+.expand-btn{
+    .icon-down:before{
+        @include transform (rotate(180deg));
+        height: 1.2rem;
+        width: 1.2rem;
+        display: block;
+        margin: 0 auto;
+        top: -0.1rem;
+        position: relative;
+    }
+}
+.expand-btn.collapsed{
+    .icon-down:before{
+        @include transform (rotate(0deg));
+        top:  0.1rem;
+    }
+}
+
+.gray-card{
+    background: $light-gray;
+    padding: 0.5rem 1rem 1rem;
+    margin: 0 0 0.5rem 0;
+    li{
+        font-size: 0.8rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0.3rem 0;
+        text-transform: uppercase;
+        &:first-child{
+            font-weight: bold;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+        }
+        span{
+            width: 23%;
+            height: 1.5rem;
+            margin-top: 1px;
+        }
+        .cross-check{
+            padding-left: 0.6rem;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,478 @@
+/* custom check-box */
+.check-box {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 0.1rem 0;
+    input{
+        position: absolute;
+        @include opacity(0);
+        cursor: pointer;
+    }
+    input:checked ~ .checkmark {
+        background-color: $orange-color;
+        border: 2px solid $orange-color;
+    }
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+}
+.radio-top{
+    padding-top: 1rem;    
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: $white-color;
+    border: 2px solid $orange-color;
+    @include border-radius(2px);
+    @include transform (translate(0%, -50%));
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 0.24rem;
+        top: 0.03rem;
+        width: 0.35rem;
+        height: 0.65rem;
+        border: solid $white-color;
+        border-width: 0 0.15rem 0.11rem 0;
+        @include transform (rotate(45deg));
+    }
+}
+.selected{
+    .checkmark{
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 0.25rem;
+            top: -0.03rem;
+            width: 0.35rem;
+            height: 0.75rem;
+            border: solid $orange-color;
+            border-width: 0 0.15rem 0.11rem 0;
+            @include transform (rotate(40deg));
+        }    
+    }    
+}
+.check-box-left{
+    padding-left: 2.2rem;
+    font-size: 12px;
+    .checkmark {
+        left: 0;
+        right: auto;  
+    }
+}
+
+.check-box-right{
+    .checkmark {
+        right: 0.5rem;
+        left: auto;  
+    }
+}
+
+.check-box.header{
+    margin: 0 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.85rem 0;
+}
+
+/* custom radio button */
+.radio-box {
+    display: block;
+    position: relative;
+    padding-left: 2.5rem;
+    line-height: 14px;
+    cursor: pointer;
+    font-size:11px;
+    font-family: $font-book;
+    @include user-select(none);
+    input {
+        position: absolute;
+        @include opacity(0);
+        cursor: pointer;
+    }
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $orange-color;
+        background-color: $white-color;
+        @include border-radius(50%);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    .checkmark:after {
+        top: 5px;
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        border: 0;
+        @include border-radius(100%);
+        background:$white-color;
+    }
+}
+/* On mouse-over, add a grey background color */
+.radio-box:hover input ~ .checkmark {
+    background-color: $white-color;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-box input:checked ~ .checkmark {
+    background-color: $orange-color;
+}
+/* Show the indicator (dot/circle) when checked */
+.radio-box input:checked ~ .checkmark:after {
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.radio-box input:checked ~ span {
+    font-family: $font-medium;
+}
+
+/* Custom Select Box */ 
+.form-custom{
+    border-color: transparent;
+    box-shadow: none;
+    @include border-radius(0);
+}
+.form-control{
+    @extend .form-custom;
+    border-bottom: 1px solid $hint-grey;
+    padding:.375rem 0;
+    font-family: $font-book;
+    &:focus{
+        @extend .form-custom;
+        border-bottom: 1px solid $orange-color;
+    }
+    
+    &::-webkit-input-placeholder{
+        color:$hint-grey;
+    }
+    &::-moz-placeholder{
+        color:$hint-grey;
+    }
+    &:-ms-input-placeholder{
+        color:$hint-grey;
+    }
+    &::-ms-input-placeholder{
+        color:$hint-grey;
+    }
+    &::placeholder{
+        color:$hint-grey;
+    }
+}
+input[type=text]::-ms-clear {
+    display: none;
+}
+select.form-control{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+.select{
+    position: relative;
+    select{
+        position: relative;
+        padding-right: 15px;
+        font-size: 0.85rem;
+    }
+    &:before{
+        content: "";
+        border-top:5px solid $orange-color;
+        border-left:4px solid transparent;
+        border-right:4px solid transparent;
+        position: absolute;
+        right:0;
+        top:50%;
+        margin-top: -2.5px;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+/* form error message */
+.has-error{
+    label{
+        color:$error-text;
+    }
+    .error-message{
+        @extend label;
+        font-family:$primary-font;
+        font-size:0.8rem;
+    }
+}
+
+/*Checkbox Cross Check*/
+.cross-check{
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    label {
+        cursor: pointer;
+        width: 1.2rem;
+        height: 1.2rem;
+        @include border-radius(100%);
+        position: relative;
+        background: url('../images/close.svg') no-repeat ;
+        background-size: 100% 100%;
+    }
+    input:checked + label {
+        background: url('../images/check.svg') no-repeat ;       
+        background-size: 100% 100%;
+    }
+}
+
+/* Checkbox Dropdown */
+.form-control.dropdown-toggle{
+    cursor: pointer;
+}
+.checkbox-list-dp{
+    min-width: 360px;
+    border: none;
+    @include box-shadow(0px 0px 15px rgba(0,0,0,0.2));
+    padding: 1rem 1.6rem;
+    font-family:$primary-font;   
+    ul{
+        margin:0px;
+        padding: 0px;
+        list-style-type: none;
+        
+        li{
+            font-size: 0.8rem;
+        }
+    }
+    .checkbox-list{
+        li{
+            margin-bottom: 10px;
+            label{
+                margin-bottom: 0px;
+            }
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .checked-list{
+        li{
+            margin-bottom:5px;
+            
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    p{
+        font-size: 0.7rem;
+        margin-bottom: 0.8rem;
+    }
+    .order-list{
+        list-style-type: decimal;
+    }
+}
+
+/*  radio button lists*/  
+.radiobtn-list-dp{
+    @extend .checkbox-list-dp;
+    padding: 0;
+    min-width:250px;
+    transform: translate3d(370px, 0px, 0px)!important;
+    button{
+        margin: 1.5rem 1rem;
+        float:right;
+    }
+    .radiobtn-list{
+        list-style: none;
+        height: 130px;
+        border-bottom: 1px solid $grey-border;
+        li{
+            padding: 1rem 1.6rem;
+            border-bottom: 1px solid $grey-border;
+            label{
+                margin-bottom: 0px;
+            }
+            &:last-child{
+                margin-bottom: 10px;
+                border-bottom: transparent;
+            }
+        }
+        .mCSB_scrollTools {
+            .mCSB_draggerRail{
+                width: 1px;
+                background: $transparent;
+                margin-right: 0;
+            }
+            .mCSB_dragger {
+                .mCSB_dragger_bar{
+                    background: $orange-color;
+                    width: 5px;
+                    margin-right: 0;
+                    @include border-radius(0);
+                }
+            }
+        }
+    }
+}
+
+/* Scrollbar */
+.mCSB_scrollTools {
+    .mCSB_draggerRail{
+        width: 1px;
+        background: #cadefa;
+        margin-right: 1.5px;
+    }
+    .mCSB_dragger {
+        .mCSB_dragger_bar{
+            background: $orange-color;
+            width: 3px;
+            margin-right: 0;
+        }
+        &:hover{
+            .mCSB_dragger_bar{
+                background: $orange-color;
+            }
+        }
+        &:active{
+            .mCSB_dragger_bar{
+                background: $orange-color;
+            }
+        }
+        &.mCSB_dragger_onDrag{
+            .mCSB_dragger_bar{
+                background: $orange-color;
+            }
+        }
+        
+    }
+}
+
+/* Inline form control */
+.ct-inline-form.media{
+    font-size:0.8571428571428571rem;
+    border-bottom:1px solid $placeholder-color;
+    padding-bottom: 5px;
+    font-family: $primary-font;
+    
+    span{
+        &.align-self-center{
+            font-family: $font-book;
+            color:$primary-color;
+            
+        }
+    }
+    .form-control{
+        background: transparent;
+        padding: 0;
+        padding-right: 15px;
+        height: auto !important;
+        border-bottom: none;
+        line-height: 18px;
+        font-size:0.8571428571428571rem;
+        cursor: pointer;
+        font-family: $font-medium;
+        color:$tertiary-color;
+    }
+}
+
+/* Custom Input Type File */
+
+.ct-input-file{
+    color:$heading-color;
+    cursor: pointer;
+    input[type="file"]{
+        display: none;
+    }
+    
+}
+.custom-select-box{
+    #customFile .custom-file-control:lang(en)::after {
+        content: "Upload.doc";
+        width: 160px;
+    }
+    #customFile .custom-file-control:lang(en)::before {
+        content: "\e914";
+        position: absolute;
+        font-family: 'tcl-icons' !important;
+        right: 5px;
+        color: $orange-color;
+        font-size: 1rem;
+    }
+
+    .custom-file-control.selected:lang(en)::after {
+        content: "" !important;
+    }
+
+    .custom-file {
+        overflow: hidden;
+        height: auto;
+        border-bottom: 1px solid $grey-border;
+        width: 200px;
+        position: relative;
+        input[type="file"]{
+            height: 1px;
+        }
+    }
+    .custom-file-control {
+        white-space: nowrap;
+        margin-top: -10px;
+        padding-bottom: 5px;
+        width: 175px;
+        overflow: hidden;
+        font-family: $font-book;
+    }
+}
+.date-select{
+    border-bottom: 1px solid $placeholder-color;
+    padding-bottom: 3px;
+    margin-bottom: 1.3rem;
+    input{
+        border: 0;
+        font-family: $font-medium; 
+        font-size: 11px; 
+        width: 100%;
+        background: url('../../assets/images/calendar.svg') right no-repeat;
+        background-size: 1rem; 
+    }
+    a{
+        color: $orange-color;
+        font-size: 1rem;
+        float: right;
+    }
+}
+.routing-protocol-spacing{
+    margin-top: 27px;
+}
+.radio-labels{
+    .form-group{
+        margin-bottom: 1.7rem;
+        label{
+            font-family: $font-medium; 
+            font-size: 11px;
+            color: $label-color;
+            margin-bottom: 0;
+        }
+    }
+}
+

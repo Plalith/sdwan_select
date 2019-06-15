@@ -1,0 +1,72 @@
+/* Nav Tabs */
+
+.custom-tabs{
+    .nav-tabs {
+        background: $light-gray;
+        border: none;
+        padding-left: 1.466rem;
+        padding-right: 1.466rem;
+        
+        .nav-link{
+            border: none;
+            margin-bottom: 0px;
+            font-family:$font-medium;
+            text-transform: uppercase;
+            font-size:0.7142857142857143rem;
+            padding: 0.7rem 1.466rem 0.9rem;
+            text-align: center;
+            color:$tertiary-color;
+            position: relative;
+            
+            &.active{
+                background: transparent;
+                color:$primary-color;
+                
+                &:after{
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    background:$heading-color;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            
+        }   
+    }
+    .tab-content{
+        >.tab-pane{
+            padding:1.466rem;
+            
+            &.padding-none{
+                padding: 0;
+            }
+        }   
+    }
+    
+    &.no-bg{
+        .pull-nav-outside{
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: 2.142857142857143rem;
+        }
+        .nav-tabs{
+            padding-left: 0;
+            padding-right: 0;
+            background: $transparent;
+            
+            .nav-link{
+                color:$white-color;
+                font-size: 0.85rem;
+                text-transform: none;
+                padding: 1.4285714285714286rem  0.8571428571428571rem 0.7rem;
+                margin-right:2.142857142857143rem;
+                
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

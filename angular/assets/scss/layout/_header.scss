@@ -1,0 +1,21 @@
+.navbar{
+    .navbar-toggler{
+        border: none;
+        padding:0.7142857142857143rem 1.6428571428571428rem;
+        padding-right: 0px;
+    }
+    background: $bg-blue;
+    @include box-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    padding: 0rem;
+    min-height: 70px;
+    
+    .navbar-brand{
+        padding: 0rem;
+        margin-right:1.4285714285714286rem;
+        
+        &.align-self-end{
+            margin-bottom:0.7142857142857143rem;
+            margin-left:1.6428571428571428rem;
+        }
+    }
+}

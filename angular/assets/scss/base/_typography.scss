@@ -1,0 +1,174 @@
+/* typography */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham/Gotham-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gotham/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/Gotham/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/Gotham/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/Gotham/Gotham-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham-Light';  
+  src: url('../fonts/Gotham/Gotham-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gotham/Gotham-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Gotham/Gotham-Light.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Gotham/Gotham-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Gotham/Gotham-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../fonts/Gotham/Gotham-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gotham/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('../fonts/Gotham/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+     url('../fonts/Gotham/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('../fonts/Gotham/Gotham-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 400;
+   font-style: normal;
+ }
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../fonts/Gotham/Gotham-Book.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gotham/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Gotham/Gotham-Book.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Gotham/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Gotham/Gotham-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham/Gotham-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Gotham/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Gotham/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Gotham/Gotham-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+ /* icons */
+ @font-face {
+  font-family: 'tcl-icons';
+  src:  url('../fonts/tcl-icons/tcl-icons.eot');
+  src:  url('../fonts/tcl-icons/tcl-icons.eot#iefix') format('embedded-opentype'),
+    url('../fonts/tcl-icons/tcl-icons.ttf') format('truetype'),
+    url('../fonts/tcl-icons/tcl-icons.woff') format('woff'),
+    url('../fonts/tcl-icons/tcl-icons.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tcl-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height:1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info-filled:before {
+  content: "\e91a";
+}
+.icon-minus:before {
+  content: "\e91e";
+}
+.icon-plus:before {
+  content: "\e91d";
+}
+.icon-back:before {
+  content: "\e900";
+}
+.icon-calendar:before {
+  content: "\e901";
+}
+.icon-cloud:before {
+  content: "\e902";
+}
+.icon-configuration:before {
+  content: "\e903";
+}
+.icon-delete:before {
+  content: "\e904";
+}
+.icon-down:before {
+  content: "\e905";
+}
+.icon-download:before {
+  content: "\e906";
+}
+.icon-edit:before {
+  content: "\e907";
+}
+.icon-home:before {
+  content: "\e908";
+}
+.icon-network:before {
+  content: "\e909";
+}
+.icon-up:before {
+  content: "\e90a";
+}
+.icon-unified-communication:before {
+  content: "\e90b";
+}
+.icon-internetaccess:before {
+  content: "\e90c";
+}
+.icon-lan:before {
+  content: "\e90d";
+}
+.icon-map:before {
+  content: "\e90e";
+}
+.icon-check-mark:before {
+  content: "\e90f";
+  color: #525252;
+}
+.icon-menu:before {
+  content: "\e910";
+  color:$white-color;
+}
+.icon-order:before {
+  content: "\e911";
+}
+.icon-profile:before {
+  content: "\e912";
+}
+.icon-share:before {
+  content: "\e913";
+}
+.icon-upload:before {
+  content: "\e914";
+}
+.icon-cart:before {
+  content: "\e915";
+}
+.icon-help:before {
+  content: "\e916";
+}
+.icon-private-line:before {
+  content: "\e917";
+}
+.icon-info:before {
+  content: "\e918";
+}
+.icon-close:before {
+  content: "\e919";
+}
+.icon-caret-right:before {
+  content: "\e91b";
+}
+.icon-caret-left:before {
+  content: "\e91c";
+}

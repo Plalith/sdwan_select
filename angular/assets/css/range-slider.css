@@ -1,0 +1,83 @@
+input[type="range"] {
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  min-height: 25px;
+  overflow: hidden;
+  width: 260px;
+  margin: 0px;
+  padding: 0px;
+}
+input[type="range"]:focus {
+  box-shadow: none;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #ea7926;
+  content: '';
+  height: 2px;
+  pointer-events: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 22px;
+  width: 22px;
+  -webkit-appearance: none;
+          appearance: none;
+  background: #ea7926;
+  border-radius: 50%;
+  box-shadow: 5px 0 0 -10px #ddd, 6px 0 0 -10px #ddd, 7px 0 0 -10px #ddd, 8px 0 0 -10px #ddd, 9px 0 0 -10px #ddd, 10px 0 0 -10px #ddd, 11px 0 0 -10px #ddd, 12px 0 0 -10px #ddd, 13px 0 0 -10px #ddd, 14px 0 0 -10px #ddd, 15px 0 0 -10px #ddd, 16px 0 0 -10px #ddd, 17px 0 0 -10px #ddd, 18px 0 0 -10px #ddd, 19px 0 0 -10px #ddd, 20px 0 0 -10px #ddd, 21px 0 0 -10px #ddd, 22px 0 0 -10px #ddd, 23px 0 0 -10px #ddd, 24px 0 0 -10px #ddd, 25px 0 0 -10px #ddd, 26px 0 0 -10px #ddd, 27px 0 0 -10px #ddd, 28px 0 0 -10px #ddd, 29px 0 0 -10px #ddd, 30px 0 0 -10px #ddd, 31px 0 0 -10px #ddd, 32px 0 0 -10px #ddd, 33px 0 0 -10px #ddd, 34px 0 0 -10px #ddd, 35px 0 0 -10px #ddd, 36px 0 0 -10px #ddd, 37px 0 0 -10px #ddd, 38px 0 0 -10px #ddd, 39px 0 0 -10px #ddd, 40px 0 0 -10px #ddd, 41px 0 0 -10px #ddd, 42px 0 0 -10px #ddd, 43px 0 0 -10px #ddd, 44px 0 0 -10px #ddd, 45px 0 0 -10px #ddd, 46px 0 0 -10px #ddd, 47px 0 0 -10px #ddd, 48px 0 0 -10px #ddd, 49px 0 0 -10px #ddd, 50px 0 0 -10px #ddd, 51px 0 0 -10px #ddd, 52px 0 0 -10px #ddd, 53px 0 0 -10px #ddd, 54px 0 0 -10px #ddd, 55px 0 0 -10px #ddd, 56px 0 0 -10px #ddd, 57px 0 0 -10px #ddd, 58px 0 0 -10px #ddd, 59px 0 0 -10px #ddd, 60px 0 0 -10px #ddd, 61px 0 0 -10px #ddd, 62px 0 0 -10px #ddd, 63px 0 0 -10px #ddd, 64px 0 0 -10px #ddd, 65px 0 0 -10px #ddd, 66px 0 0 -10px #ddd, 67px 0 0 -10px #ddd, 68px 0 0 -10px #ddd, 69px 0 0 -10px #ddd, 70px 0 0 -10px #ddd, 71px 0 0 -10px #ddd, 72px 0 0 -10px #ddd, 73px 0 0 -10px #ddd, 74px 0 0 -10px #ddd, 75px 0 0 -10px #ddd, 76px 0 0 -10px #ddd, 77px 0 0 -10px #ddd, 78px 0 0 -10px #ddd, 79px 0 0 -10px #ddd, 80px 0 0 -10px #ddd, 81px 0 0 -10px #ddd, 82px 0 0 -10px #ddd, 83px 0 0 -10px #ddd, 84px 0 0 -10px #ddd, 85px 0 0 -10px #ddd, 86px 0 0 -10px #ddd, 87px 0 0 -10px #ddd, 88px 0 0 -10px #ddd, 89px 0 0 -10px #ddd, 90px 0 0 -10px #ddd, 91px 0 0 -10px #ddd, 92px 0 0 -10px #ddd, 93px 0 0 -10px #ddd, 94px 0 0 -10px #ddd, 95px 0 0 -10px #ddd, 96px 0 0 -10px #ddd, 97px 0 0 -10px #ddd, 98px 0 0 -10px #ddd, 99px 0 0 -10px #ddd, 100px 0 0 -10px #ddd, 101px 0 0 -10px #ddd, 102px 0 0 -10px #ddd, 103px 0 0 -10px #ddd, 104px 0 0 -10px #ddd, 105px 0 0 -10px #ddd, 106px 0 0 -10px #ddd, 107px 0 0 -10px #ddd, 108px 0 0 -10px #ddd, 109px 0 0 -10px #ddd, 110px 0 0 -10px #ddd, 111px 0 0 -10px #ddd, 112px 0 0 -10px #ddd, 113px 0 0 -10px #ddd, 114px 0 0 -10px #ddd, 115px 0 0 -10px #ddd, 116px 0 0 -10px #ddd, 117px 0 0 -10px #ddd, 118px 0 0 -10px #ddd, 119px 0 0 -10px #ddd, 120px 0 0 -10px #ddd, 121px 0 0 -10px #ddd, 122px 0 0 -10px #ddd, 123px 0 0 -10px #ddd, 124px 0 0 -10px #ddd, 125px 0 0 -10px #ddd, 126px 0 0 -10px #ddd, 127px 0 0 -10px #ddd, 128px 0 0 -10px #ddd, 129px 0 0 -10px #ddd, 130px 0 0 -10px #ddd, 131px 0 0 -10px #ddd, 132px 0 0 -10px #ddd, 133px 0 0 -10px #ddd, 134px 0 0 -10px #ddd, 135px 0 0 -10px #ddd, 136px 0 0 -10px #ddd, 137px 0 0 -10px #ddd, 138px 0 0 -10px #ddd, 139px 0 0 -10px #ddd, 140px 0 0 -10px #ddd, 141px 0 0 -10px #ddd, 142px 0 0 -10px #ddd, 143px 0 0 -10px #ddd, 144px 0 0 -10px #ddd, 145px 0 0 -10px #ddd, 146px 0 0 -10px #ddd, 147px 0 0 -10px #ddd, 148px 0 0 -10px #ddd, 149px 0 0 -10px #ddd, 150px 0 0 -10px #ddd, 151px 0 0 -10px #ddd, 152px 0 0 -10px #ddd, 153px 0 0 -10px #ddd, 154px 0 0 -10px #ddd, 155px 0 0 -10px #ddd, 156px 0 0 -10px #ddd, 157px 0 0 -10px #ddd, 158px 0 0 -10px #ddd, 159px 0 0 -10px #ddd, 160px 0 0 -10px #ddd, 161px 0 0 -10px #ddd, 162px 0 0 -10px #ddd, 163px 0 0 -10px #ddd, 164px 0 0 -10px #ddd, 165px 0 0 -10px #ddd, 166px 0 0 -10px #ddd, 167px 0 0 -10px #ddd, 168px 0 0 -10px #ddd, 169px 0 0 -10px #ddd, 170px 0 0 -10px #ddd, 171px 0 0 -10px #ddd, 172px 0 0 -10px #ddd, 173px 0 0 -10px #ddd, 174px 0 0 -10px #ddd, 175px 0 0 -10px #ddd, 176px 0 0 -10px #ddd, 177px 0 0 -10px #ddd, 178px 0 0 -10px #ddd, 179px 0 0 -10px #ddd, 180px 0 0 -10px #ddd, 181px 0 0 -10px #ddd, 182px 0 0 -10px #ddd, 183px 0 0 -10px #ddd, 184px 0 0 -10px #ddd, 185px 0 0 -10px #ddd, 186px 0 0 -10px #ddd, 187px 0 0 -10px #ddd, 188px 0 0 -10px #ddd, 189px 0 0 -10px #ddd, 190px 0 0 -10px #ddd, 191px 0 0 -10px #ddd, 192px 0 0 -10px #ddd, 193px 0 0 -10px #ddd, 194px 0 0 -10px #ddd, 195px 0 0 -10px #ddd, 196px 0 0 -10px #ddd, 197px 0 0 -10px #ddd, 198px 0 0 -10px #ddd, 199px 0 0 -10px #ddd, 200px 0 0 -10px #ddd, 201px 0 0 -10px #ddd, 202px 0 0 -10px #ddd, 203px 0 0 -10px #ddd, 204px 0 0 -10px #ddd, 205px 0 0 -10px #ddd, 206px 0 0 -10px #ddd, 207px 0 0 -10px #ddd, 208px 0 0 -10px #ddd, 209px 0 0 -10px #ddd, 210px 0 0 -10px #ddd, 211px 0 0 -10px #ddd, 212px 0 0 -10px #ddd, 213px 0 0 -10px #ddd, 214px 0 0 -10px #ddd, 215px 0 0 -10px #ddd, 216px 0 0 -10px #ddd, 217px 0 0 -10px #ddd, 218px 0 0 -10px #ddd, 219px 0 0 -10px #ddd, 220px 0 0 -10px #ddd, 221px 0 0 -10px #ddd, 222px 0 0 -10px #ddd, 223px 0 0 -10px #ddd, 224px 0 0 -10px #ddd, 225px 0 0 -10px #ddd, 226px 0 0 -10px #ddd, 227px 0 0 -10px #ddd, 228px 0 0 -10px #ddd, 229px 0 0 -10px #ddd, 230px 0 0 -10px #ddd, 231px 0 0 -10px #ddd, 232px 0 0 -10px #ddd, 233px 0 0 -10px #ddd, 234px 0 0 -10px #ddd, 235px 0 0 -10px #ddd, 236px 0 0 -10px #ddd, 237px 0 0 -10px #ddd, 238px 0 0 -10px #ddd, 239px 0 0 -10px #ddd, 240px 0 0 -10px #ddd, 241px 0 0 -10px #ddd, 242px 0 0 -10px #ddd, 243px 0 0 -10px #ddd, 244px 0 0 -10px #ddd, 245px 0 0 -10px #ddd, 246px 0 0 -10px #ddd, 247px 0 0 -10px #ddd, 248px 0 0 -10px #ddd, 249px 0 0 -10px #ddd, 250px 0 0 -10px #ddd, 251px 0 0 -10px #ddd, 252px 0 0 -10px #ddd, 253px 0 0 -10px #ddd, 254px 0 0 -10px #ddd, 255px 0 0 -10px #ddd, 256px 0 0 -10px #ddd, 257px 0 0 -10px #ddd, 258px 0 0 -10px #ddd, 259px 0 0 -10px #ddd, 260px 0 0 -10px #ddd;
+  margin-top: -10px;
+  border: none;
+}
+input[type="range"]::-moz-range-track {
+  width: 260px;
+  height: 2px;
+}
+input[type="range"]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  background: #ea7926;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+}
+input[type="range"]::-moz-range-progress {
+  height: 2px;
+  background: #ea7926;
+  border: 0;
+  margin-top: 0;
+}
+input[type="range"]::-ms-track {
+  background: transparent;
+  border: 0;
+  border-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  color: transparent;
+  height: 2px;
+  margin-top:0px;
+  width: 260px;
+}
+input[type="range"]::-ms-thumb {
+  height: 22px;
+  width: 22px;
+  background: #ea7926;
+  border-radius: 50%;
+  border: none;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #ea7926;
+  border-radius: 0;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 0;
+}
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
